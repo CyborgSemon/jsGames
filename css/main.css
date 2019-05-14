@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F7F7F7;
+}
+
+.container {
+	width: 80%;
+	margin: 24px auto 24px auto;
+	background-color: white;
+	border-radius: 24px;
+}
+
+.container > .card {
+	padding: 24px;
+	border-radius: 24px;
+}
+
+.card {
+	box-shadow: 0 8px 20px rgba(0,0,0,.1);
+	border-radius: 12px;
+	text-decoration: none;
+	color: black;
+}
+
+.cardImage img {
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	width: 100%;
+}
+
+.cardText {
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+}
+
+.cardTitle {
+	font-weight: 700;
+	font-size: 1.5em;
+	margin-bottom: 12px;
+}
+
+.cardBody {
+	font-size: 1.1em;
+}
+
+h1 {
+	font-family: 'Merriweather Sans', sans-serif;
+	margin-bottom: 24px;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
+}
+
+.games {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: 24px;
+}
+
+.games > .card {
+	max-width: 300px;
+	cursor: pointer;
+	transition: 0.3s box-shadow;
+	margin: 12px;
+}
+
+.games > .card:hover {
+	box-shadow: 0 16px 40px rgba(0,0,0,.15);
+}
+
+
+.madeBy {
+	opacity: 0.5;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 0.75em;
+	padding: 12px 0;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+
+}
+

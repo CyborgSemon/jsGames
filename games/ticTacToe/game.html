@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Javascript Tic Tac Toe</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<h3 id="currentTurn">Player X Turn</h3>
+		<div class="winCounter">
+			<h2>Win Counter</h2>
+			<br>
+			<h5>X Wins: <span id="xWins">0</span></h5>
+			<h5>O Wins: <span id="oWins">0</span></h5>
+
+		</div>
+		<div class="gameBox">
+			<h2 id="winner"></h2>
+			<div class="game">
+				<div class="row" data-row="0">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square right" data-square="2"></div>
+				</div>
+				<div class="row" data-row="1">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square right" data-square="2"></div>
+				</div>
+				<div class="row" data-row="2">
+					<div class="square bottom" data-square="0"></div>
+					<div class="square bottom" data-square="1"></div>
+					<div class="square bottom right" data-square="2"></div>
+				</div>
+			</div>
+			<button id="reset" type="button" name="button">Reset</button>
+		</div>
+
+		<script src="js/main.js"></script>
+	</body>
+</html>
