@@ -81,6 +81,9 @@ function winCheck (actualTurn) {
 		titleText = "Red Wins!";
 	}
 
+
+	// BUG: pieces.some(e => e.x === 2 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 3 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 3 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 4 && e.y === 2 && e.color === 1)
+
 	for (var i = 0; i < pieces.length; i++) {
 		if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
 			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+1 && e.color === actualTurn)) {
@@ -104,9 +107,9 @@ function winCheck (actualTurn) {
 						break;
 					}
 				}
-			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y && e.color === actualTurn)) {
-				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y && e.color === actualTurn)) {
-					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y && e.color === actualTurn)) {
+			} else if (pieces.some(e => e.x+1 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
+				if (pieces.some(e => e.x+2 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
+					if (pieces.some(e => e.x+3 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
 						winner(actualTurn, titleText);
 						break;
 					}
@@ -146,7 +149,7 @@ function reset () {
 	active = true;
 	pieces = [];
 	turn = 1;
-	
+
 	[].forEach.call(document.querySelectorAll('.square'), (box)=> {
 		box.innerHTML = '';
 	});

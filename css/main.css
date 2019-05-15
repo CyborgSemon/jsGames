@@ -51,25 +51,6 @@ p {
 	padding-right: 0;
 }
 
-/* .games {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin-top: 24px;
-}
-
-.games > .card {
-	max-width: 300px;
-	cursor: pointer;
-	transition: 0.3s box-shadow;
-	margin: 12px;
-}
-
-.games > .card:hover {
-	box-shadow: 0 16px 40px rgba(0,0,0,.15);
-} */
-
 .card {
 	display: block;
 	box-shadow: 0 8px 20px rgba(0,0,0,.1);
