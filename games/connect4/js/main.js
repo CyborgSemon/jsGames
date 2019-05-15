@@ -56,11 +56,11 @@ function addPiece (x) {
 				if (turn == 1) {
 					square.innerHTML = '<div class="token red"></div>';
 					playerTitle.innerText = "Player Yellow turn";
-					turn = 2
+					turn = 2;
 				} else {
 					square.innerHTML = '<div class="token yellow"></div>';
 					playerTitle.innerText = "Player Red turn";
-					turn = 1
+					turn = 1;
 				}
 
 				winCheck(turn);
@@ -81,37 +81,38 @@ function winCheck (actualTurn) {
 		titleText = "Red Wins!";
 	}
 
-
 	for (var i = 0; i < pieces.length; i++) {
-		if (pieces[i].color == actualTurn) {
-			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-				if (pieces.some(e => e.x === pieces[i].x && e.y+1 === pieces[i].y && e.color === actualTurn)) {
-					if (pieces.some(e => e.x === pieces[i].x && e.y+2 === pieces[i].y && e.color === actualTurn)) {
-						if (pieces.some(e => e.x === pieces[i].x && e.y+3 === pieces[i].y && e.color === actualTurn)) {
-							winner(actualTurn, titleText);
-							break;
-						}
+		if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
+			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+1 && e.color === actualTurn)) {
+				if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+2 && e.color === actualTurn)) {
+					if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+3 && e.color === actualTurn)) {
+						console.log("yeet1");
+						winner(actualTurn, titleText);
+						break;
 					}
-				} else if (pieces.some(e => e.x+1 === pieces[i].x && e.y+1 === pieces[i].y && e.color === actualTurn)) {
-					if (pieces.some(e => e.x+2 === pieces[i].x && e.y+2 === pieces[i].y && e.color === actualTurn)) {
-						if (pieces.some(e => e.x+3 === pieces[i].x && e.y+3 === pieces[i].y && e.color === actualTurn)) {
-							winner(actualTurn, titleText);
-							break;
-						}
+				}
+			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
+				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
+					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
+						console.log("yeet2");
+						winner(actualTurn, titleText);
+						break;
 					}
-				} else if (pieces.some(e => e.x-1 === pieces[i].x && e.y+1 === pieces[i].y && e.color === actualTurn)) {
-					if (pieces.some(e => e.x-2 === pieces[i].x && e.y+2 === pieces[i].y && e.color === actualTurn)) {
-						if (pieces.some(e => e.x-3 === pieces[i].x && e.y+3 === pieces[i].y && e.color === actualTurn)) {
-							winner(actualTurn, titleText);
-							break;
-						}
+				}
+			} else if (pieces.some(e => e.x === pieces[i].x-1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
+				if (pieces.some(e => e.x === pieces[i].x-2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
+					if (pieces.some(e => e.x === pieces[i].x-3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
+						console.log("yeet3");
+						winner(actualTurn, titleText);
+						break;
 					}
-				} else if (pieces.some(e => e.x+1 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-					if (pieces.some(e => e.x+2 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-						if (pieces.some(e => e.x+3 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-							winner(actualTurn, titleText);
-							break;
-						}
+				}
+			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y && e.color === actualTurn)) {
+				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y && e.color === actualTurn)) {
+					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y && e.color === actualTurn)) {
+						console.log("yeet4");
+						winner(actualTurn, titleText);
+						break;
 					}
 				}
 			}
