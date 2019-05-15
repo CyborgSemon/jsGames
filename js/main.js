@@ -1,0 +1,1 @@
+console.log("Haha, there is no js on the main page... yet :P");
