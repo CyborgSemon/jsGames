@@ -105,3 +105,15 @@ body {
 	color: white;
 }
 
+.madeBy {
+	opacity: 0.5;
+	font-family: 'Merriweather Sans', sans-serif;
+	font-size: 0.75em;
+	padding: 12px 0;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+

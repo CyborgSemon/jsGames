@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Connect 4</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<h1 id="player">Player Red turn</h1>
+		<div class="winCounter">
+			<h2>Win Counter</h2>
+			<br>
+			<h5>Red Wins: <span id="redWins">0</span></h5>
+			<h5>Yellow Wins: <span id="yellowWins">0</span></h5>
+		</div>
+		<button id="reset" type="button" name="button">Reset</button>
+
+		<div class="gameBox">
+			<div class="grid">
+				<div class="row" data-row="5">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square" data-square="2"></div>
+					<div class="square" data-square="3"></div>
+					<div class="square" data-square="4"></div>
+					<div class="square" data-square="5"></div>
+					<div class="square borderRight" data-square="6"></div>
+				</div>
+				<div class="row" data-row="4">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square" data-square="2"></div>
+					<div class="square" data-square="3"></div>
+					<div class="square" data-square="4"></div>
+					<div class="square" data-square="5"></div>
+					<div class="square borderRight" data-square="6"></div>
+				</div>
+				<div class="row" data-row="3">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square" data-square="2"></div>
+					<div class="square" data-square="3"></div>
+					<div class="square" data-square="4"></div>
+					<div class="square" data-square="5"></div>
+					<div class="square borderRight" data-square="6"></div>
+				</div>
+				<div class="row" data-row="2">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square" data-square="2"></div>
+					<div class="square" data-square="3"></div>
+					<div class="square" data-square="4"></div>
+					<div class="square" data-square="5"></div>
+					<div class="square borderRight" data-square="6"></div>
+				</div>
+				<div class="row" data-row="1">
+					<div class="square" data-square="0"></div>
+					<div class="square" data-square="1"></div>
+					<div class="square" data-square="2"></div>
+					<div class="square" data-square="3"></div>
+					<div class="square" data-square="4"></div>
+					<div class="square" data-square="5"></div>
+					<div class="square borderRight" data-square="6"></div>
+				</div>
+				<div class="row" data-row="0">
+					<div class="square borderBottom" data-square="0"></div>
+					<div class="square borderBottom" data-square="1"></div>
+					<div class="square borderBottom" data-square="2"></div>
+					<div class="square borderBottom" data-square="3"></div>
+					<div class="square borderBottom" data-square="4"></div>
+					<div class="square borderBottom" data-square="5"></div>
+					<div class="square borderBottom borderRight" data-square="6"></div>
+				</div>
+				<div class="row buttonSplit">
+					<button type="button" name="button" onclick="addPiece(0)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(1)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(2)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(3)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(4)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(5)">Drop token</button>
+					<button type="button" name="button" onclick="addPiece(6)">Drop token</button>
+				</div>
+			</div>
+		</div>
+		<span class="madeBy">Made by Simon Watson</span>
+		<script src="js/main.js"></script>
+	</body>
+</html>

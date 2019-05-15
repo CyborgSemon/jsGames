@@ -12,21 +12,77 @@ body {
 	width: 80%;
 	margin: 24px auto 24px auto;
 	background-color: white;
+	box-shadow: 0 8px 20px rgba(0,0,0,.1);
+	text-decoration: none;
+	color: black;
+	padding: 24px 24px 12px 24px;
 	border-radius: 24px;
 }
 
-.container > .card {
-	padding: 24px;
-	border-radius: 24px;
+h1 {
+	font-family: 'Merriweather Sans', sans-serif;
+	margin-bottom: 24px;
 }
+
+p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1em;
+}
+
+.games {
+	display: flex;
+	flex-direction: row;
+	margin-top: 24px;
+}
+
+.col {
+	width: 33.3%;
+	padding: 6px;
+	margin: 6px;
+}
+
+.colLeft {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.colRight {
+	margin-right: 0;
+	padding-right: 0;
+}
+
+/* .games {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-top: 24px;
+}
+
+.games > .card {
+	max-width: 300px;
+	cursor: pointer;
+	transition: 0.3s box-shadow;
+	margin: 12px;
+}
+
+.games > .card:hover {
+	box-shadow: 0 16px 40px rgba(0,0,0,.15);
+} */
 
 .card {
+	display: block;
 	box-shadow: 0 8px 20px rgba(0,0,0,.1);
 	border-radius: 12px;
 	text-decoration: none;
 	color: black;
+	transition: 0.3s box-shadow;
 }
 
+
+.card:hover {
+	box-shadow: 0 16px 40px rgba(0,0,0,.15);
+}
 .cardImage img {
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
@@ -50,36 +106,6 @@ body {
 	font-size: 1.1em;
 }
 
-h1 {
-	font-family: 'Merriweather Sans', sans-serif;
-	margin-bottom: 24px;
-}
-
-p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.1em;
-}
-
-.games {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	margin-top: 24px;
-}
-
-.games > .card {
-	max-width: 300px;
-	cursor: pointer;
-	transition: 0.3s box-shadow;
-	margin: 12px;
-}
-
-.games > .card:hover {
-	box-shadow: 0 16px 40px rgba(0,0,0,.15);
-}
-
-
 .madeBy {
 	opacity: 0.5;
 	font-family: 'Merriweather Sans', sans-serif;
@@ -88,6 +114,5 @@ p {
 	text-align: center;
 	display: flex;
 	justify-content: center;
-
 }
 
