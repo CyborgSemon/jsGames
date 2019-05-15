@@ -81,9 +81,6 @@ function winCheck (actualTurn) {
 		titleText = "Red Wins!";
 	}
 
-
-	// BUG: pieces.some(e => e.x === 2 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 3 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 3 && e.y === 2 && e.color === 1) && pieces.some(e => e.x === 4 && e.y === 2 && e.color === 1)
-
 	for (var i = 0; i < pieces.length; i++) {
 		if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
 			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+1 && e.color === actualTurn)) {
