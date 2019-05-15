@@ -86,7 +86,6 @@ function winCheck (actualTurn) {
 			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+1 && e.color === actualTurn)) {
 				if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+2 && e.color === actualTurn)) {
 					if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-						console.log("yeet1");
 						winner(actualTurn, titleText);
 						break;
 					}
@@ -94,7 +93,6 @@ function winCheck (actualTurn) {
 			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
 				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
 					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-						console.log("yeet2");
 						winner(actualTurn, titleText);
 						break;
 					}
@@ -102,7 +100,6 @@ function winCheck (actualTurn) {
 			} else if (pieces.some(e => e.x === pieces[i].x-1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
 				if (pieces.some(e => e.x === pieces[i].x-2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
 					if (pieces.some(e => e.x === pieces[i].x-3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-						console.log("yeet3");
 						winner(actualTurn, titleText);
 						break;
 					}
@@ -110,7 +107,6 @@ function winCheck (actualTurn) {
 			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y && e.color === actualTurn)) {
 				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y && e.color === actualTurn)) {
 					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y && e.color === actualTurn)) {
-						console.log("yeet4");
 						winner(actualTurn, titleText);
 						break;
 					}
@@ -136,7 +132,6 @@ function winner (player, titleText) {
 	}
 
 	resetBtn.style.display = "block";
-
 }
 
 function reset () {
@@ -151,11 +146,11 @@ function reset () {
 	active = true;
 	pieces = [];
 	turn = 1;
+	
 	[].forEach.call(document.querySelectorAll('.square'), (box)=> {
 		box.innerHTML = '';
 	});
 
 	playerTitle.innerText = "Player Red turn";
-
 	resetBtn.style.display = "none";
 }
