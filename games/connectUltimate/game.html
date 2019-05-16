@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Connect Ultimate</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans|Roboto">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id="scoreboard">
+			<h1 id="player">Player Red turn</h1>
+			<div class="winCounter">
+				<h2>Win Counter</h2>
+				<br>
+				<h5>Red Wins: <span id="redWins">0</span></h5>
+				<h5>Yellow Wins: <span id="yellowWins">0</span></h5>
+			</div>
+			<button class="finishBtn" id="reset" type="button" name="button">Reset</button>
+			<button class="finishBtn" id="change" type="button" name="button">Change</button>
+		</div>
+
+
+		<div id="startBox" class="gameBox">
+			<h1>Connect Ultimate</h1>
+			<br>
+			<p>
+				Welcome to Connect Ultimate. Connect Ultimate is a form of Connect 4, but you get to choose how many connections you need to win.<br>
+				So if you want to play connect 3, just type 3 down below. If you want to play connect 20 (though it is not recommended) just type 20 down below.<br>
+				The grid will adapt to the amount of connections you want. So a normal connect 4 game will be a 7 x 6 grid, while connect 5 will have a 8 x 7 grid. (This is why connect 20 isnt recommended)<br>
+				<br>
+				Enjoy!
+			</p>
+			<br>
+			<input id="connectAmount" type="number" placeholder="4">
+			<br>
+			<button id="playButton">Play!</button>
+			<p id="error">REEEE</p>
+		</div>
+
+
+		<div class="gameBox">
+			<div id="grid">
+
+			</div>
+		</div>
+		<span class="madeBy">Made by Simon Watson</span>
+		<script src="js/main.js"></script>
+	</body>
+</html>
