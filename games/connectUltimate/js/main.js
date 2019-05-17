@@ -29,8 +29,10 @@ var grid = [];
 var boxSize = 0;
 var tokenSize = 0;
 var turn = 1;
+var gridBox = document.getElementById('grid');
 
 function makeGame () {
+	active = true;
 	errorMsg.style.display = 'none;';
 	grid = [];
 	starterBox.style.display = 'none';
@@ -44,7 +46,6 @@ function makeGame () {
 
 	boxSize = 480 / grid.length;
 	tokenSize = boxSize - (boxSize / 10);
-	let gridBox = document.getElementById('grid');
 	let newGrid = '';
 	for (var i = grid.length; i >= 0; i--) {
 		if (i - 1 == -1) {
@@ -92,6 +93,7 @@ var resetBtn = document.getElementById('reset');
 var changeBtn = document.getElementById('change');
 
 resetBtn.addEventListener('click', reset);
+changeBtn.addEventListener('click', changeMode);
 
 function addPiece (x) {
 	if (active) {
@@ -184,6 +186,7 @@ function reset () {
 	makeGame();
 	active = true;
 	pieces = [];
+	bestResult = [];
 	turn = 1;
 
 	[].forEach.call(document.querySelectorAll('.square'), (box)=> {
@@ -195,54 +198,14 @@ function reset () {
 	changeBtn.style.display = "none";
 }
 
-
-
-// function winCheck (actualTurn) {
-// 	if (actualTurn == 1) {
-// 		actualTurn = 2;
-// 		titleText = "Yellow Wins!";
-// 	} else {
-// 		actualTurn = 1;
-// 		titleText = "Red Wins!";
-// 	}
-//
-// 	for (var i = 0; i < pieces.length; i++) {
-// 		if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-// 			if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+1 && e.color === actualTurn)) {
-// 				if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+2 && e.color === actualTurn)) {
-// 					if (pieces.some(e => e.x === pieces[i].x && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-// 						winner(actualTurn, titleText);
-// 						break;
-// 					}
-// 				}
-// 			} else if (pieces.some(e => e.x === pieces[i].x+1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
-// 				if (pieces.some(e => e.x === pieces[i].x+2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
-// 					if (pieces.some(e => e.x === pieces[i].x+3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-// 						winner(actualTurn, titleText);
-// 						break;
-// 					}
-// 				}
-// 			} else if (pieces.some(e => e.x === pieces[i].x-1 && e.y === pieces[i].y+1 && e.color === actualTurn)) {
-// 				if (pieces.some(e => e.x === pieces[i].x-2 && e.y === pieces[i].y+2 && e.color === actualTurn)) {
-// 					if (pieces.some(e => e.x === pieces[i].x-3 && e.y === pieces[i].y+3 && e.color === actualTurn)) {
-// 						winner(actualTurn, titleText);
-// 						break;
-// 					}
-// 				}
-// 			} else if (pieces.some(e => e.x+1 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-// 				if (pieces.some(e => e.x+2 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-// 					if (pieces.some(e => e.x+3 === pieces[i].x && e.y === pieces[i].y && e.color === actualTurn)) {
-// 						winner(actualTurn, titleText);
-// 						break;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// 	if (active == true && pieces.length == (amountNumber + 2) * (amountNumber + 3)) {
-// 		winner(3, "It's a tie!");
-// 	}
-// }
-
-
-
+function changeMode () {
+	gridBox.innerHTML = '';
+	turn = 1;
+	playerTitle.innerText = "Player Red turn";
+	resetBtn.style.display = "none";
+	changeBtn.style.display = "none";
+	starterBox.style.display = 'block';
+	scoreBoard.style.display = "none";
+	pieces = [];
+	bestResult = [];
+}
